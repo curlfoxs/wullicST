@@ -20,7 +20,7 @@ class WullicBST:
          return cls.__lt__ != object.__lt__ or \
              cls.__gt__ != object.__gt__
 
-    def check_validkey(self, key) -> bool:
+    def check_validkey(self, key):
         # if key is None:
             # raise TypeError
         if self.size() > 0:
@@ -31,11 +31,17 @@ class WullicBST:
             if not self.is_comparable(key):
                 raise TypeError("{} is not comparable".format(key))
 
-    def copytree(self, tree, keyname, valname):
+    def copytree_tmp(self, tree, keyname, valname):
+        # For basic testing
         if tree:
             self.put(getattr(tree, keyname), getattr(tree, valname))
             self.copytree(tree.left, keyname, valname)
             self.copytree(tree.right, keyname, valname)
+
+    def get_tmp(self, key) -> Optional[BSTreeNode]:
+        # For basic testing
+        self.check_validkey(key)
+        return self._get(self.root, key)
 
     def _key(self, tree: Optional[BSTreeNode]):
         return tree.key if tree else None
@@ -49,7 +55,7 @@ class WullicBST:
     def _size(self, tree: Optional[BSTreeNode]) -> int:
         return tree.N if tree else 0
 
-    def _cal_size(self,  tree: Optional[BSTreeNode]):
+    def _cal_size(self,  tree: Optional[BSTreeNode]) -> int:
         return 0 if not tree else self._size(tree.left) + self._size(tree.right) + 1
 
     def min(self):
@@ -75,10 +81,6 @@ class WullicBST:
             return tree
         else:
             return self._max(tree.right)
-
-    def get_tmp(self, key) -> Optional[BSTreeNode]:
-        self.check_validkey(key)
-        return self._get(self.root, key)
 
     def get(self, key) -> Optional[BSTreeNode]:
         self.check_validkey(key)
@@ -134,8 +136,8 @@ class WullicBST:
         else:
             return tree
 
-    def delete(self, key: int) -> Optional[BSTreeNode]:
-        return self._delete(self.root, key)
+    def delete(self, key: int):
+        self._delete(self.root, key)
 
 
     def _delete(self, tree: Optional[BSTreeNode], key: int) -> Optional[BSTreeNode]:
@@ -167,7 +169,7 @@ class WullicBST:
         tree.N = self._size(tree.left) + self._size(tree.right) + 1
         return tree
 
-    def _deletemin(self, tree):
+    def _deletemin(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
         # Delete the minimun node of tree, return root node
         if tree is None or tree.left is None:
             return None
@@ -175,10 +177,36 @@ class WullicBST:
         tree.N = self._size(tree.left) + self._size(tree.right) + 1
         return tree
 
-    def _deletemax(self, tree):
+    def _deletemax(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
         # Delete the maximun node of tree, return root node
         if tree is None or tree.right is None:
             return None
         tree.right = self._deletemax(tree.right)
         tree.N = self._size(tree.left) + self._size(tree.right) + 1
         return tree
+
+    def _rotateRight(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
+        leftTree = tree.left
+        tree.left = leftTree.right
+        leftTree.right = tree
+        leftTree.N = tree.N
+        tree.N = self._cal_size(tree)
+        self._recal_info_afterRotateRight(leftTree, tree)
+        return leftTree
+
+    def _rotateLeft(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
+        rightTree  = tree.right
+        tree.right = rightTree.left
+        rightTree.left = tree
+        rightTree.N = tree.N
+        tree.N = self._cal_size(tree)
+        self._recal_info_afterRotateLeft(rightTree, tree)
+        return rightTree
+
+    def _recal_info_afterRotateRight(self, preLeft, preRoot):
+        # Basic BST would not use rotation
+        raise NotImplementedError
+
+    def _recal_info_afterRotateLeft(self, preRight, preRoot):
+        # Basic BST would not use rotation
+        raise NotImplementedError
