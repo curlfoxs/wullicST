@@ -5,7 +5,7 @@ class AVLTreeNode(BSTreeNode):
         super().__init__(key, val, left, right)
         self.H = 1 # TODO factor?
 
-class WullicAVL(WullicBST):
+class WullicAVL(BSTree):
     def _height(self, tree: Optional[AVLTreeNode]):
         return tree.H if tree else 0
 
