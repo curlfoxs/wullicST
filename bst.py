@@ -1,6 +1,6 @@
-from typing import Optional, List
-from collections.abc import Iterable
+from typing import Optional
 from random import randint
+from copy import deepcopy
 
 
 class BSTreeNode:
@@ -137,10 +137,10 @@ class WullicBST:
             return tree
 
     def delete(self, key: int):
-        self._delete(self.root, key)
+        self.root = self._delete(self.root, key)
 
 
-    def _delete(self, tree: Optional[BSTreeNode], key: int) -> Optional[BSTreeNode]:
+    def _delete(self, tree: Optional[BSTreeNode], key) -> Optional[BSTreeNode]:
         if tree is None:
             return None
         # Find the node to be deleted
@@ -156,34 +156,31 @@ class WullicBST:
             elif tree.right is None:
                 return tree.left
             # Simpplify the problem to delete the Min of right tree or the Max of left tree ~
-            t = tree
             r = randint(0, 1)
             if r == 0:
-                tree = self._min(tree.right)
-                tree.right = self._deletemin(tree.right)
-                tree.left = t.left
+                t = self._min(tree.right)
+                tree.right = self._delete(tree.right, t.key)
             else:
-                tree = self._max(tree.left)
-                tree.left = self._deletemax(tree.left)
-                tree.right = t.right
-        tree.N = self._size(tree.left) + self._size(tree.right) + 1
+                t = self._max(tree.left)
+                tree.left = self._delete(tree.left, t.key)
+            tree.key  = deepcopy(t.key)
+            tree.val = deepcopy(t.val)
+        tree.N = self._cal_size(tree)
         return tree
 
-    def _deletemin(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
-        # Delete the minimun node of tree, return root node
-        if tree is None or tree.left is None:
-            return None
-        tree.left = self._deletemin(root.left)
-        tree.N = self._size(tree.left) + self._size(tree.right) + 1
-        return tree
+    # def _deletemin(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
+    #     # Delete the minimun node of tree, return root node
+    #     if tree is None:
+    #         return None
+    #     t = self._min(tree)
+    #     return self._delete(tree, t.key)
 
-    def _deletemax(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
-        # Delete the maximun node of tree, return root node
-        if tree is None or tree.right is None:
-            return None
-        tree.right = self._deletemax(tree.right)
-        tree.N = self._size(tree.left) + self._size(tree.right) + 1
-        return tree
+    # def _deletemax(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
+    #     # Delete the maximun node of tree, return root node
+    #     if tree is None:
+    #         return None
+    #     t = self._max(tree)
+    #     return self._delete(tree, t.key)
 
     def _rotateRight(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
         leftTree = tree.left
