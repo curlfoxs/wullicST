@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Callable
 from random import randint
 from copy import deepcopy
 
@@ -41,7 +41,7 @@ def bst_get(tree: Optional[TreeNode], key) -> Optional[TreeNode]:
         return tree
 
 # Common method to put the TreeNode(key, val) to tree and return the root node
-def bst_put(tree: Optional[TreeNode], key, val, nodeType=TreeNode, maintainFunc=None) -> Optional[TreeNode]:
+def bst_put(tree: Optional[TreeNode], key, val, nodeType=TreeNode, maintainFunc: Optional[Callable]=None) -> Optional[TreeNode]:
     '''Insert a new TreeNode(key, val) to BSTree
 
     Args:
@@ -68,10 +68,10 @@ def bst_put(tree: Optional[TreeNode], key, val, nodeType=TreeNode, maintainFunc=
     # Function Hook to Do More: Caculate size, height, color ...
     # Update TreeNode attribute
     if maintainFunc:
-        maintainFunc(tree)
+        tree = maintainFunc(tree)
     return tree
 
-def bst_delete(tree: Optional[TreeNode], key, maintainFunc=None) -> Optional[TreeNode]:
+def bst_delete(tree: Optional[TreeNode], key, maintainFunc: Optional[Callable]=None) -> Optional[TreeNode]:
     '''Delete the TreeNode of given key
 
     Args:
@@ -107,5 +107,21 @@ def bst_delete(tree: Optional[TreeNode], key, maintainFunc=None) -> Optional[Tre
         tree.key  = deepcopy(t.key)
         tree.val = deepcopy(t.val)
     if maintainFunc:
-        maintainFunc(tree)
+        tree = maintainFunc(tree)
     return tree
+
+def bst_rotate_right(tree: Optional[TreeNode], updateAttr: Optional[Callable]=None) -> Optional[TreeNode]:
+    x = tree.left
+    tree.left = x.right
+    x.right = tree
+    if updateAttr:
+        x = updateAttr(x, tree)
+    return x
+
+def bst_rotate_left(tree: Optional[TreeNode], updateAttr: Optional[Callable]=None) -> Optional[TreeNode]:
+    x  = tree.right
+    tree.right = x.left
+    x.left = tree
+    if updateAttr:
+        x = updateAttr(x, tree)
+    return x

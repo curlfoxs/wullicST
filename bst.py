@@ -90,28 +90,30 @@ class BSTree:
         return bst_get(tree, key)
 
     def _put(self, tree, key, val):
-        def updateSize(tree: Optional[BSTreeNode]):
+        def updateSize(tree: BSTreeNode) -> BSTreeNode:
             tree.N = self._cal_size(tree)
+            return tree
         return bst_put(tree, key, val, BSTreeNode, updateSize)
 
     def _delete(self, tree, key):
-        def updateSize(tree: Optional[BSTreeNode]):
+        def updateSize(tree: BSTreeNode) -> BSTreeNode:
             tree.N = self._cal_size(tree)
+            return tree
         return bst_delete(tree, key, updateSize)
 
-    # Delete the minimun node of tree, return root node
-    def _deletemin(self, tree):
-        if tree is None:
-            return None
-        t = self._min(tree)
-        return self._delete(tree, t.key)
+    # # Delete the minimun node of tree, return root node
+    # def _deletemin(self, tree):
+    #     if tree is None:
+    #         return None
+    #     t = self._min(tree)
+    #     return self._delete(tree, t.key)
 
-    # Delete the maximun node of tree, return root node
-    def _deletemax(self, tree):
-        if tree is None:
-            return None
-        t = self._max(tree)
-        return self._delete(tree, t.key)
+    # # Delete the maximun node of tree, return root node
+    # def _deletemax(self, tree):
+    #     if tree is None:
+    #         return None
+    #     t = self._max(tree)
+    #     return self._delete(tree, t.key)
 
     def size(self) -> int:
         '''Return size of BSTree'''
@@ -180,7 +182,7 @@ class BSTree:
         self.check_validkey(key)
         self.root = self._put(self.root, key, val)
 
-    def delete(self, key: int):
+    def delete(self, key):
         '''Insert {key: val} into BSTree
 
         Args:
@@ -195,29 +197,3 @@ class BSTree:
         '''
         self.check_validkey(key)
         self.root = self._delete(self.root, key)
-
-    def _rotateRight(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
-        leftTree = tree.left
-        tree.left = leftTree.right
-        leftTree.right = tree
-        leftTree.N = tree.N
-        tree.N = self._cal_size(tree)
-        self._recal_info_afterRotateRight(leftTree, tree)
-        return leftTree
-
-    def _rotateLeft(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
-        rightTree  = tree.right
-        tree.right = rightTree.left
-        rightTree.left = tree
-        rightTree.N = tree.N
-        tree.N = self._cal_size(tree)
-        self._recal_info_afterRotateLeft(rightTree, tree)
-        return rightTree
-
-    def _recal_info_afterRotateRight(self, preLeft, preRoot):
-        # Basic BST would not use rotation
-        raise NotImplementedError
-
-    def _recal_info_afterRotateLeft(self, preRight, preRoot):
-        # Basic BST would not use rotation
-        raise NotImplementedError
