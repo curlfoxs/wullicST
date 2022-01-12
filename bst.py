@@ -1,13 +1,19 @@
 from typing import Optional
 
 from random import randint
-from copy import deepcopy
 
-from bst_func import *
+# from bst_func import *
+
+class TreeNode:
+    def __init__(self, key=None, left=None, right=None):
+        self.key = key
+        self.left = left
+        self.right = right
 
 class BSTreeNode(TreeNode):
     def __init__(self, key=None, val=None, left=None, right=None):
-        super().__init__(key, val, left, right)
+        super().__init__(key, left, right)
+        self.val = val
         self.N = 1
 
 class BSTree:
@@ -29,9 +35,9 @@ class BSTree:
         if key is None:
             raise TypeError("Key is None!")
         if not self.empty():
-            nodeType = self.select(0).__class__
-            if not isinstance(key, nodeType):
-                raise TypeError("Existed key isinstance of {1}. But {0} is not!".format(key, nodeType))
+            keyType = self._key(self._min(self.root)).__class__
+            if not isinstance(key, keyType):
+                raise TypeError("Existed key isinstance of {1}. But {0} is not!".format(key, keyType))
         else:
             if not self.is_comparable(key):
                 raise TypeError("{} is not comparable!".format(key))
@@ -50,17 +56,25 @@ class BSTree:
         self.check_validkey(key)
         return self._get(self.root, key)
 
-    def _key(self, tree):
-        return bst_key(tree)
+    # Get TreeNode.key
+    def _key(self, tree: Optional[BSTreeNode]):
+        return tree.key if tree else None
 
-    def _val(self, tree):
-        return bst_val(tree)
+    # Get TreeNode.val
+    def _val(self, tree: Optional[BSTreeNode]):
+        return tree.val if tree else None
 
-    def _min(self, tree):
-        return bst_min(tree)
+    # Common method to get the minimum TreeNode of tree
+    def _min(self, tree: Optional[BSTreeNode]) -> BSTreeNode:
+        if tree is None or tree.left is None:
+            return tree
+        return self._min(tree.left)
 
-    def _max(self, tree):
-        return bst_max(tree)
+    # Common method to get the maximum TreeNode of tree
+    def _max(self, tree: Optional[BSTreeNode]) -> BSTreeNode:
+        if tree is None or tree.right is None:
+            return tree
+        return self._max(tree.right)
 
     # Common method to get size of tree
     def _size(self, tree: Optional[BSTreeNode]) -> int:
@@ -86,34 +100,140 @@ class BSTree:
         else:
             return tree
 
-    def _get(self, tree, key):
-        return bst_get(tree, key)
 
-    def _put(self, tree, key, val):
-        def updateSize(tree: BSTreeNode) -> BSTreeNode:
-            tree.N = self._cal_size(tree)
+    # Common method to get the TreeNode of given key
+    def _get(self, tree: Optional[BSTreeNode], key) -> Optional[BSTreeNode]:
+        if tree is None:
+            return None
+        if key < tree.key:
+            return self._get(tree.left, key)
+        elif tree.key < key:
+            return self._get(tree.right, key)
+        else:
             return tree
-        return bst_put(tree, key, val, BSTreeNode, updateSize)
 
-    def _delete(self, tree, key):
-        def updateSize(tree: BSTreeNode) -> BSTreeNode:
-            tree.N = self._cal_size(tree)
-            return tree
-        return bst_delete(tree, key, updateSize)
+    def _TreeNodeType(self, key, val):
+        '''Build a new TreeNode(key, val)
 
-    # # Delete the minimun node of tree, return root node
-    # def _deletemin(self, tree):
-    #     if tree is None:
-    #         return None
-    #     t = self._min(tree)
-    #     return self._delete(tree, t.key)
+        Args:
+            key (Object): key of TreeNode to build
+            val (Object): val of TreeNode to build
 
-    # # Delete the maximun node of tree, return root node
-    # def _deletemax(self, tree):
-    #     if tree is None:
-    #         return None
-    #     t = self._max(tree)
-    #     return self._delete(tree, t.key)
+        Returns:
+            BSTreeNode
+        '''
+        return BSTreeNode(key, val)
+
+    def _put_maintain(self, tree: Optional[BSTreeNode]) ->  Optional[BSTreeNode]:
+        '''Maintian good features of BSTree in insertion procedure
+
+        Args:
+            tree (BSTreeNode): The BSTreeNode in insertion recursion
+
+        Returns:
+            RootNode that complete insertion and maintains good features that we want
+        '''
+        return tree
+
+    # Common method to put the TreeNode(key, val) to tree and return the root node
+    def _put(self, tree: Optional[BSTreeNode], key, val) -> Optional[BSTreeNode]:
+        '''Insert a new TreeNode(key, val) to BSTree
+
+        Args:
+            tree (BSTreeNode): The root of BSTree to insert
+            key (Object): key of TreeNode to insert
+            val (Object): val of TreeNode to insert
+            args: Other arguments to build new TreeNode
+
+        Raises:
+            RuntimeError
+
+        Returns:
+            RootNode of tree that has completed insertion
+        '''
+        if tree is None:
+            return self._TreeNodeType(key, val)
+        if key < tree.key:
+            tree.left = self._put(tree.left, key, val)
+        elif tree.key < key:
+            tree.right = self._put(tree.right, key, val)
+        else:
+            tree.val = val
+        tree.N = self._cal_size(tree)
+        # Call _put_maintain method which could be overwrited by derived class
+        return self._put_maintain(tree)
+
+    def _delete_maintain(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
+        '''Maintian good features of BSTree in deletion procedure
+
+        Args:
+            tree (BSTreeNode): The BSTreeNode in deletion recursion
+
+        Returns:
+            RootNode that coomplete deletion and maintains good features that we want
+        '''
+        return tree
+
+    def _delete(self, tree: Optional[BSTreeNode], key) -> Optional[BSTreeNode]:
+        '''Delete the TreeNode of given key
+
+        Args:
+            tree (BSTreeNode): The root of BSTree
+            key (Object): key of TreeNode to delete
+
+        Returns:
+            RootNode of tree that has completed deletion
+        '''
+        if tree is None:
+            return None
+        if key < tree.key:
+            tree.left = self._delete(tree.left, key)
+        elif key > tree.key:
+            tree.right = self._delete(tree.right, key)
+        else:
+            if tree.left is None:
+                return tree.right
+            elif tree.right is None:
+                return tree.left
+            t = tree
+            r = randint(0, 1)
+            if r == 0:
+                tree = self._min(t.right)
+                tree.right = self._delete(t.right, tree.key)
+                tree.left = t.left
+            else:
+                tree = self._max(t.left)
+                tree.left = self._delete(t.left, tree.key)
+                tree.right = t.right
+        tree.N = self._cal_size(tree)
+        return self._delete_maintain(tree)
+
+    def _updateAfterRotate(self, preChild: Optional[BSTreeNode], preRoot: Optional[BSTreeNode]) -> None:
+        '''Update BSTreeNode attribution after rotation
+
+        Args:
+            preChild (BSTreeNode): The child node before rotation
+            preRoot (BSTreeNode): The root node before rotation
+
+        Returns:
+            None: Just update attribution of BSTreeNode
+        '''
+        preChild.N = preRoot.N
+        preRoot.N = self._cal_size(preRoot)
+
+    def _rotateRight(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
+        x = tree.left
+        tree.left = x.right
+        x.right = tree
+        self.updateAfterRotate(x, tree)
+        return x
+
+    def _rotateLeft(self, tree: Optional[BSTreeNode]) -> Optional[BSTreeNode]:
+        x  = tree.right
+        tree.right = x.left
+        x.left = tree
+        self._updateAfterRotate(x, tree)
+        return x
 
     def size(self) -> int:
         '''Return size of BSTree'''
