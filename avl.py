@@ -6,7 +6,7 @@ class AVLTreeNode(BSTreeNode):
         self.H = 1 # TODO factor?
 
 class AVLTree(BSTree):
-    def _TreeNodeType(self, key, val):
+    def _treeNodeType(self, key, val):
         '''Build a new TreeNode(key, val)
 
         Args:
@@ -42,7 +42,7 @@ class AVLTree(BSTree):
         preChild.H = self._cal_height(preChild)
 
 
-    def _put_maintain(self, tree: Optional[AVLTreeNode]) ->  Optional[AVLTreeNode]:
+    def _put_maintain(self, tree: Optional[AVLTreeNode], key, val) ->  Optional[AVLTreeNode]:
         '''Maintian good features of AVLTree in insertion procedure
 
         Args:
@@ -69,7 +69,7 @@ class AVLTree(BSTree):
             tree = self._rotateLeft(tree)  # RotateLeft following
         return tree
 
-    def _delete_maintain(self, tree: Optional[AVLTreeNode]) -> Optional[AVLTreeNode]:
+    def _delete_maintain(self, tree: Optional[AVLTreeNode], key) -> Optional[AVLTreeNode]:
         '''Maintian good features of AVLTree in deletion prodecure
 
         Args:
@@ -89,7 +89,7 @@ class AVLTree(BSTree):
             tree = self._rotateRight(tree)
         elif factor < -1 and self._cal_factor(tree.right) <= 0:
             tree = self._rotateLeft(tree)
-        elif factor < -1 and self._cal_factor(tree.left) > 0:
+        elif factor < -1 and self._cal_factor(tree.right) > 0:
             tree.right = self._rotateRight(tree.right)
             tree = self._rotateLeft(tree)
         return tree
