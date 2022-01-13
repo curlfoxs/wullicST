@@ -2,6 +2,7 @@ from typing import Optional, Callable
 from random import randint
 from copy import deepcopy
 
+from termcolor import colored
 class TreeNode:
     def __init__(self, key=None, val=None, left=None, right=None):
         self.key = key
@@ -130,7 +131,10 @@ def _display_aux(tree):
     """Returns list of strings, width, height, and horizontal coordinate of the root."""
     # No child.
     if tree.right is None and tree.left is None:
-        line = '%s' % tree.key
+        if hasattr(tree, 'color'):
+            line = '%s' % tree.key if not tree.color else '*{}*'.format(tree.key)
+        else:
+            line =  '%s' % tree.key
         width = len(line)
         height = 1
         middle = width // 2
@@ -139,7 +143,10 @@ def _display_aux(tree):
     # Only left child.
     if tree.right is None:
         lines, n, p, x = _display_aux(tree.left)
-        s = '%s' % tree.key
+        if hasattr(tree, 'color'):
+            s = '%s' % tree.key if not tree.color else '*{}*'.format(tree.key)
+        else:
+            s =  '%s' % tree.key
         u = len(s)
         first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s
         second_line = x * ' ' + '/' + (n - x - 1 + u) * ' '
@@ -149,7 +156,10 @@ def _display_aux(tree):
     # Only right child.
     if tree.left is None:
         lines, n, p, x = _display_aux(tree.right)
-        s = '%s' % tree.key
+        if hasattr(tree, 'color'):
+            s = '%s' % tree.key if not tree.color else '*{}*'.format(tree.key)
+        else:
+            s =  '%s' % tree.key
         u = len(s)
         first_line = s + x * '_' + (n - x) * ' '
         second_line = (u + x) * ' ' + '\\' + (n - x - 1) * ' '
@@ -159,7 +169,10 @@ def _display_aux(tree):
     # Two children.
     left, n, p, x = _display_aux(tree.left)
     right, m, q, y = _display_aux(tree.right)
-    s = '%s' % tree.key
+    if hasattr(tree, 'color'):
+        s = '%s' % tree.key if not tree.color else '*{}*'.format(tree.key)
+    else:
+        s =  '%s' % tree.key
     u = len(s)
     first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s + y * '_' + (m - y) * ' '
     second_line = x * ' ' + '/' + (n - x - 1 + u + y) * ' ' + '\\' + (m - y - 1) * ' '

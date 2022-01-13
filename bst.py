@@ -3,7 +3,7 @@ from queue import LifoQueue
 from random import randint
 
 from bst_func import _display_aux
-# from bst_func import *
+
 class InvalidKeyError(KeyError):
     pass
 
@@ -11,7 +11,20 @@ class InvalidKeyError(KeyError):
 class NoSuchElementException(Exception):
     pass
 
+def validKey(func):
+    def wrap(self, key, *args, **kwargs):
+        self.check_validkey(key)
+        return func(self, key, *args, **kwargs)
+    return wrap
 
+def validRet(func):
+    def wrap(*args, **kwargs):
+        x =  func(*args, **kwargs)
+        if x is not None:
+            return x
+        raise NoSuchElementException("calls {}() with None result".format(func.__name__))
+    return wrap
+	
 class TreeNode:
     def __init__(self, key=None, left=None, right=None):
         self.key = key
@@ -71,20 +84,6 @@ class BSTree:
                 raise InvalidKeyError("Existed key is instance of {1}. But \'{0}\' is not!".format(key, keyType))
         elif not self._is_comparable(key):
             raise InvalidKeyError("{} is not comparable key!".format(key))
-
-    def validKey(func):
-        def wrap(self, key, *args, **kwargs):
-            self.check_validkey(key)
-            return func(self, key, *args, **kwargs)
-        return wrap
-
-    def validRet(func):
-        def wrap(*args, **kwargs):
-            x =  func(*args, **kwargs)
-            if x:
-                return x
-            raise NoSuchElementException("calls {}() with None result".format(func.__name__))
-        return wrap
 
     def size(self) -> int:
         '''Return size of BSTree'''
@@ -459,7 +458,8 @@ class BSTree:
         else:
             return self._rank(tree.right, key) + self._size(tree.left) + 1
 
-    def display(self):
-        lines, *_ = _display_aux(self.root)
+    def display(self, tree=None):
+        tree = tree if tree else self.root
+        lines, *_ = _display_aux(tree)
         for line in lines:
             print(line)
