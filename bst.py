@@ -2,6 +2,7 @@ from typing import Optional, Generator
 from queue import LifoQueue
 from random import randint
 
+
 from bst_func import _display_aux
 
 class InvalidKeyError(KeyError):
@@ -17,13 +18,13 @@ def validKey(func):
         return func(self, key, *args, **kwargs)
     return wrap
 
-def validRet(func):
-    def wrap(*args, **kwargs):
-        x =  func(*args, **kwargs)
-        if x is not None:
-            return x
-        raise NoSuchElementException("calls {}() with None result".format(func.__name__))
-    return wrap
+# def validRet(func):
+#     def wrap(*args, **kwargs):
+#         x =  func(*args, **kwargs)
+#         if x is not None:
+#             return x
+#         raise NoSuchElementException("calls {}() with None result".format(func.__name__))
+#     return wrap
 	
 class TreeNode:
     def __init__(self, key=None, left=None, right=None):
@@ -41,11 +42,14 @@ class BSTreeNode(TreeNode):
 
 class BSTree:
     ''' A Binary Search Tree reasonable implementation '''
-    def __init__(self, num=None):
+    def __init__(self, data=None):
         self.root = None
-        if num:
-            for _ in range(num):
+        if isinstance(data, int):
+            for _ in range(data):
                 self.put(randint(0, 10000))
+        elif isinstance(data, BSTree):
+            for key in data:
+                self.put(key, data[key])
 
     def __len__(self):
         return self.size()
@@ -59,17 +63,40 @@ class BSTree:
     def __contains__(self, key):
         return self.contains(key)
 
+    def __iter__(self):
+        keys = self.keys()
+        if keys is None:
+            return iter([])
+        return keys
+
+    def __repr__(self):
+        s = super().__repr__()
+        if self.size() == 0:
+            return  s + '\nST{}'
+        cnt = 0
+        rel = []
+        for k in self.keys():
+            if cnt >= 100:
+                break
+            rel.append(repr(k) + ': ' + repr(self.get(k)))
+        return s + '\nST{' + ', '.join(rel) + '}'
+    
     def __getitem__(self, key):
-        item = self.get(key)
-        if item:
-            return item
-        raise BSTKeyError
+       return self.get(key)
 
     def __setitem__(self, key, value):
         self.put(key, value)
 
     def __delitem__(self, key):
         self.delete(key)
+
+    def __add__(self, others):
+        if isinstance(others, BSTree):
+            bst = self.__class__(self)
+            for key in others:
+                bst.put(key, others[key])
+            return bst
+        raise TypeError("unsupported operand type(s) for +: '{}' and '{}'".format(self.__class__, other.__class__))
 
     def check_validkey(self, key):
         '''We should check the key object whether valid
@@ -93,12 +120,10 @@ class BSTree:
         '''Return bool of whether BSTree is empty'''
         return self.size() == 0
 
-    @validRet
     def min(self):
         '''Return the minimum key in BSTree"""'''
         return self._key(self._min(self.root))
 
-    @validRet
     def max(self):
         '''Return the  maximum key in BSTree'''
         return self._key(self._max(self.root))
@@ -108,7 +133,6 @@ class BSTree:
         return True if self._get(self.root, key) else False
 
     @validKey
-    @validRet
     def get(self, key):
         '''Get val of given key
 
@@ -122,7 +146,10 @@ class BSTree:
             if exist: TreeNode.val
             else: None
         '''
-        return self._val(self._get(self.root, key))
+        t = self._get(self.root, key)
+        if t is None:
+            raise BSTKeyError(str(key))
+        return self._val(t)
 
 
     @validKey
@@ -159,17 +186,14 @@ class BSTree:
         self.root = self._delete(self.root, key)
 
     @validKey
-    @validRet
     def floor(self, key):
         return self._key(self._floor(self.root, key))
 
 
     @validKey
-    @validRet
     def ceil(self, key):
         return self._key(self._ceil(self.root, key))
 
-    @validRet
     def select(self, kth: int, INCRE=True):
         '''Get the kth smallest or largest key
 
@@ -204,18 +228,20 @@ class BSTree:
     #         self.copytree(tree.right, keyname, valname)
 
     # tmp code
-    @validKey
-    def get_tmp(self, key) -> Optional[BSTreeNode]:
-        # For basic testing
-        return self._get(self.root, key)
+    # @validKey
+    # def get_tmp(self, key) -> Optional[BSTreeNode]:
+    #     # For basic testing
+    #     return self._get(self.root, key)
 
     def keys(self, low=None, high=None, INCRE=True) -> Generator:
-        low = low if low else self.min()
-        high = high if high else self.max()
+        if self.empty():
+            return None
+        low = low if low is not None else self.min()
+        high = high if high is not None else self.max()
         self.check_validkey(low)
         self.check_validkey(high)
         if low > high:
-            raise InvalidKeyError("low should not larger than high!")
+            return None
         if INCRE:
             return self._keysIncre(self.root, low, high)
         return self._keysDecre(self.root, low, high)
@@ -463,3 +489,4 @@ class BSTree:
         lines, *_ = _display_aux(tree)
         for line in lines:
             print(line)
+
