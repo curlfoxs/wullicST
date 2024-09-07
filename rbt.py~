@@ -1,0 +1,151 @@
+from bst import *
+
+RED = True
+BLACK = False
+
+class RBTreeNode(BSTreeNode):
+    def __init__(self, key=None, val=None, left=None, right=None):
+        super().__init__(key, val, left, right)
+        self.color = RED
+
+class RBTree(BSTree):
+    def _treeNodeType(self, key, val):
+        return RBTreeNode(key, val)
+
+    def _isRed(self, tree):
+        return tree.color if tree else BLACK
+
+    def _updateAfterRotate(self, preChild: Optional[RBTreeNode], preRoot: Optional[RBTreeNode]) -> None:
+        super()._updateAfterRotate(preChild, preRoot)
+        preChild.color = preRoot.color
+        preRoot.color = RED
+
+    def flip_colors(self, tree):
+        tree.left.color = BLACK
+        tree.right.color = BLACK
+        tree.color = RED
+
+    # Testing
+    def show_path_length(self):
+        self.m = 0
+        self.h = 0
+        self.com = -1
+        def trl(t, l):
+            if t is None:
+                if self.h > self.m:
+                    self.m = self.h
+                return
+            if t.left is None and t.right is None:
+                if self.com == -1:
+                    self.com = l
+                else:
+                    assert self.com == l, " Whhos, {0} != {1}, It's not a rbt!".format(l, self.com)
+                print(t.key, l)
+            self.h += 1
+            cnt = 0 if self._isRed(t.left) else 1
+            trl(t.left, l+cnt)
+            cnt = 0 if self._isRed(t.right) else 1
+            trl(t.right, l+cnt)
+            self.h -= 1
+        trl(self.root, 0)
+        # print('Tree high = ' + str(self.m))
+
+    # Testing
+    def destory_rbt(self):
+        for _ in range(self.size()):
+            k = randint(0, self.size()-1)
+            self.delete(self.select(k))
+            # self.display()
+            self.show_path_length()
+        
+    @validKey
+    def put(self, key, val=None):
+        self.root = self._put(self.root, key, val)
+        self.root.color = BLACK
+        # self.display()
+        self.show_path_length()
+
+    def wayon(self, tre):
+        if self._isRed(tree.right):
+            tree = self._rotateLeft(tree)
+        if (self._isRed(tree.left) and self._isRed(tree.left.left)):
+            tree = self._rotateRight(tree)
+        if self._isRed(tree.left) and self._isRed(tree.right):
+            self.flip_colors(tree)
+        return tree
+    
+    def _put_maintain(self, tree, key, val):
+        return self.wayon(tree)
+        
+    def notTwoLink(self, node):
+        return self._isRed(node) or self._isRed(node.left)
+
+    def isTwoLink(self, node):
+        return not self._isRed(tree) and not self._isRed(tree.left)
+    
+    def isLeaf(self, node):
+        return self.right == None
+
+    def isNearLeaf(self, node):
+        return self.right.right == None
+    
+    def _delete(self, tree, key):
+        if tree.left is None:
+            return tree.right
+        if tree.right is None:
+            return tree.left
+        
+        # TODO
+       if key < tree.key:
+            if self.isTwoLink(tree.left):
+                tree.left.color = RED
+                tree.color = BLACK
+                if self._isRed(tree.right.left): # 兄弟够借
+                    tree.right = self._rotateRight(tree.right)
+                    tree = self._rotateLeft(tree)
+                    if self._isRed(tree.right): # 不在我们递归返回路径上，要及时解决
+                        tree = self._rotateLeft(tree)
+                else: # 兄弟不够借，就借父母的
+                    tree.right.color = RED
+            tree.left = self._delete(tree.left, key)
+        else:
+            if self._isRed(tree.left):
+                tree = self._rotateRight(tree)
+
+            if key == tree.key:
+                t = tree
+                tree = self._min(t.right)
+                tree.right = self._delete(t.right, tree.key)
+                tree.left = t.left
+            else 
+            if self.isTwoLink(tree.right):
+                t = tree
+                tree = self._rotateRight(t)
+                if self._isRed(tree.left.left): # 兄弟够借
+                    
+                    
+            
+            tree.right =  self._delete(tree.right, key)
+            
+        return self.wayon(tree)
+
+
+
+    
+    
+    def _delete_min(self, tree):
+        if tree.left is None:
+            return None
+        if not self.notTwoLink(tree.left):
+            if self.notTwoLink(tree.right): # 兄弟够借
+                tree.right = self._rotateRight(tree.right)
+                tree = self._rotateLeft(tree)
+                if self.notTwoLink(tree.right): # 不在我们递归返回路径上，要及时解决
+                    tree.right = self._rotateLeft(tree.right)
+            else: # 兄弟不够借，就借父母的
+                if self.notTwoLink(tree):
+                    tree.color = BALCK
+                tree.left.color = RED
+                tree.right.color = RED
+        tree.left = self._delete_min(tree.left)
+        return self.wayon(tree)

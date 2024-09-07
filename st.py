@@ -22,7 +22,6 @@ class ST(RBTree):
         else:
             raise STeleTypeError('Unknown type to init ST object')
 
-
 class SET:
     def __init__(self, keys=None):
         self.st = ST()

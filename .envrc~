@@ -1,0 +1,1034 @@
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+      Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypor
+t.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdepreca
+ted-declarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+             PyUnicode_WSTR_LENGTH(op)))
+             ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypor
+t.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdepreca
+ted-declarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                                ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+            PyUnicode_WSTR_LENGTH(op) :                    \
+            ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypor
+t.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:59: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-dec
+larations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                                ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+            ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                   ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+      Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypor
+t.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdepreca
+ted-declarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                                ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+             PyUnicode_WSTR_LENGTH(op)))
+             ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyth
+on/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypor
+t.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:26222:16: warning: 'PyUnicode_FromUnicode' is deprecated [-Wdeprecated-
+eclarations]
+              return PyUnicode_FromUnicode(NULL, 0);
+                     ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+on/unicodeobject.h:551:1: note: 'PyUnicode_FromUnicode' has been explicitly marked deprecated here
+      Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+t.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      14 warnings and 10 errors generated.
+      error: command '/usr/bin/clang' failed with exit code 1
+      ----------------------------------------
+  ERROR: Command errored out with exit status 1: /Users/oywl/Library/Caches/pypoetry/virtualenvs/w
+llicst-UnFjf1lZ-py3.10/bin/python -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '
+'"'/private/var/folders/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-cu5s5fvn/setup.py'"'"'; 
+_file__='"'"'/private/var/folders/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-cu5s5fvn/setup
+py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.
+tringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '
+'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /private/var
+folders/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-record-sba__pwg/install-record.txt --single-versio
+-externally-managed --compile --install-headers /Users/oywl/Library/Caches/pypoetry/virtualenvs/wu
+licst-UnFjf1lZ-py3.10/include/site/python3.10/pkuseg Check the logs for full command output.
+  
+
+  at /usr/local/Cellar/poetry/1.1.12/libexec/lib/python3.10/site-packages/poetry/utils/env.py:1183
+in _run
+      1179│                 output = subprocess.check_output(
+      1180│                     cmd, stderr=subprocess.STDOUT, **kwargs
+      1181│                 )
+      1182│         except CalledProcessError as e:
+    → 1183│             raise EnvCommandError(e, input=input_)
+      1184│ 
+      1185│         return decode(output)
+      1186│ 
+      1187│     def execute(self, bin, *args, **kwargs):
+
+
+Failed to add packages, reverting the pyproject.toml file to its original content.
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ poetry add pkuseg
+Using version ^0.0.25 for pkuseg
+
+Updating dependencies
+Resolving dependencies... (0.1s)
+
+Package operations: 1 install, 0 updates, 0 removals
+
+  • Installing pkuseg (0.0.25): Failed
+
+  EnvCommandError
+
+  Command ['/Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/bin/pip', 'in
+stall', '--no-deps', 'file:///Users/oywl/Library/Caches/pypoetry/artifacts/f8/8b/97/4b84f333b38a47
+1f40394fcd20b4a196a5052c8de1f8908be8f8cf36c7/pkuseg-0.0.25.tar.gz'] errored with the following ret
+urn code 1, and output: 
+  Processing /Users/oywl/Library/Caches/pypoetry/artifacts/f8/8b/97/4b84f333b38a471f40394fcd20b4a1
+96a5052c8de1f8908be8f8cf36c7/pkuseg-0.0.25.tar.gz
+    Preparing metadata (setup.py): started
+    Preparing metadata (setup.py): finished with status 'done'
+  Building wheels for collected packages: pkuseg
+    Building wheel for pkuseg (setup.py): started
+    Building wheel for pkuseg (setup.py): finished with status 'error'
+    ERROR: Command errored out with exit status 1:
+     command: /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/bin/python 
+-u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/private/var/folders/wq/25d2fy
+9x0pzc3rlf_zd75h540000gn/T/pip-req-build-h_24bwtg/setup.py'"'"'; __file__='"'"'/private/var/folder
+s/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-h_24bwtg/setup.py'"'"';f = getattr(tokenize, '
+"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools i
+mport setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(co
+mpile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /private/var/folders/wq/25d2fy9x0pzc3rlf_zd
+75h540000gn/T/pip-wheel-at9lf5sw
+         cwd: /private/var/folders/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-h_24bwtg/
+    Complete output (257 lines):
+    /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/lib/python3.10/site-p
+ackages/setuptools/__init__.py:148: SetuptoolsDeprecationWarning: setup_requires is deprecated. Su
+pply build dependencies using PEP 517 pyproject.toml build-requires.
+      warnings.warn(
+    running bdist_wheel
+    running build
+    running build_py
+    creating build
+    creating build/lib.macosx-12-x86_64-3.10
+    creating build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/config.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/gradient.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/download.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/res_summarize.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/model.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/optimizer.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/trainer.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/data.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/scorer.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    creating build/lib.macosx-12-x86_64-3.10/pkuseg/dicts
+    copying pkuseg/dicts/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/dicts
+    creating build/lib.macosx-12-x86_64-3.10/pkuseg/models
+    copying pkuseg/models/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/models
+    creating build/lib.macosx-12-x86_64-3.10/pkuseg/postag
+    copying pkuseg/postag/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/postag
+    copying pkuseg/postag/model.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/postag
+    creating build/lib.macosx-12-x86_64-3.10/pkuseg/models/default
+    copying pkuseg/models/default/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/models/def
+ault
+    copying pkuseg/inference.pyx -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/feature_extractor.pyx -> build/lib.macosx-12-x86_64-3.10/pkuseg
+    copying pkuseg/dicts/default.pkl -> build/lib.macosx-12-x86_64-3.10/pkuseg/dicts
+    copying pkuseg/postag/feature_extractor.pyx -> build/lib.macosx-12-x86_64-3.10/pkuseg/postag
+    copying pkuseg/models/default/features.pkl -> build/lib.macosx-12-x86_64-3.10/pkuseg/models/de
+fault
+    copying pkuseg/models/default/weights.npz -> build/lib.macosx-12-x86_64-3.10/pkuseg/models/def
+ault
+    running build_ext
+    skipping 'pkuseg/inference.cpp' Cython extension (up-to-date)
+    cythoning pkuseg/feature_extractor.pyx to pkuseg/feature_extractor.c
+    cythoning pkuseg/postag/feature_extractor.pyx to pkuseg/postag/feature_extractor.c
+    building 'pkuseg.inference' extension
+    creating build/temp.macosx-12-x86_64-3.10
+    creating build/temp.macosx-12-x86_64-3.10/pkuseg
+    clang -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -f
+wrapv -O3 -Wall -I/Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/lib/pyt
+hon3.10/site-packages/numpy/core/include -I/usr/local/include -I/usr/local/opt/openssl@1.1/include
+ -I/usr/local/opt/sqlite/include -I/Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1
+lZ-py3.10/include -I/usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/p
+ython3.10 -c pkuseg/inference.cpp -o build/temp.macosx-12-x86_64-3.10/pkuseg/inference.o
+    In file included from pkuseg/inference.cpp:647:
+    In file included from /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10
+/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h:5:
+    In file included from /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10
+/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+    In file included from /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10
+/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h:1960:
+    /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/lib/python3.10/site-p
+ackages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy A
+PI, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+    #warning "Using deprecated NumPy API, disable it with " \
+     ^
+    pkuseg/inference.cpp:22327:5: error: expression is not assignable
+        ++Py_REFCNT(o);
+        ^ ~~~~~~~~~~~~
+    pkuseg/inference.cpp:22329:5: error: expression is not assignable
+        --Py_REFCNT(o);
+        ^ ~~~~~~~~~~~~
+    pkuseg/inference.cpp:22616:5: error: expression is not assignable
+        ++Py_REFCNT(o);
+        ^ ~~~~~~~~~~~~
+    pkuseg/inference.cpp:22618:5: error: expression is not assignable
+        --Py_REFCNT(o);
+        ^ ~~~~~~~~~~~~
+    pkuseg/inference.cpp:22855:5: error: expression is not assignable
+        ++Py_REFCNT(o);
+        ^ ~~~~~~~~~~~~
+    pkuseg/inference.cpp:22857:5: error: expression is not assignable
+        --Py_REFCNT(o);
+        ^ ~~~~~~~~~~~~
+    pkuseg/inference.cpp:23619:26: error: no member named 'tp_print' in '_typeobject'
+      __pyx_type___pyx_array.tp_print = 0;
+      ~~~~~~~~~~~~~~~~~~~~~~ ^
+    pkuseg/inference.cpp:23624:32: error: no member named 'tp_print' in '_typeobject'
+      __pyx_type___pyx_MemviewEnum.tp_print = 0;
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+    pkuseg/inference.cpp:23639:31: error: no member named 'tp_print' in '_typeobject'
+      __pyx_type___pyx_memoryview.tp_print = 0;
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+    pkuseg/inference.cpp:23652:36: error: no member named 'tp_print' in '_typeobject'
+      __pyx_type___pyx_memoryviewslice.tp_print = 0;
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+    pkuseg/inference.cpp:24323:22: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecat
+ed-declarations]
+                        (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                         ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+          PyUnicode_WSTR_LENGTH(op) :                    \
+          ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+    #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                      ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+    Py_DEPRECATED(3.3)
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24323:22: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-decl
+arations]
+                        (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                         ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+          ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                 ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24323:22: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecat
+ed-declarations]
+                        (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                         ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+           PyUnicode_WSTR_LENGTH(op)))
+           ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+    #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                      ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+    Py_DEPRECATED(3.3)
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24323:52: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecat
+ed-declarations]
+                        (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                       ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+          PyUnicode_WSTR_LENGTH(op) :                    \
+          ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+    #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                      ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+    Py_DEPRECATED(3.3)
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24323:52: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-decl
+arations]
+                        (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                       ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+          ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                 ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24323:52: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecat
+ed-declarations]
+                        (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                       ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+           PyUnicode_WSTR_LENGTH(op)))
+           ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+    #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                      ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+    Py_DEPRECATED(3.3)
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24339:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecat
+ed-declarations]
+                            (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                             ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+          PyUnicode_WSTR_LENGTH(op) :                    \
+          ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+    #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                      ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+    Py_DEPRECATED(3.3)
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24339:26: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-decl
+arations]
+                            (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                             ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+          ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                 ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24339:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecat
+ed-declarations]
+                            (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                             ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+           PyUnicode_WSTR_LENGTH(op)))
+           ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+    #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                      ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+    Py_DEPRECATED(3.3)
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24339:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecat
+ed-declarations]
+                            (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                              ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+          PyUnicode_WSTR_LENGTH(op) :                    \
+          ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+    #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                      ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+    Py_DEPRECATED(3.3)
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24339:59: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-decl
+arations]
+                            (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                              ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+          ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                 ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:24339:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprecat
+ed-declarations]
+                            (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                              ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+           PyUnicode_WSTR_LENGTH(op)))
+           ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+    #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                      ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecated 
+here
+    Py_DEPRECATED(3.3)
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    pkuseg/inference.cpp:26222:16: warning: 'PyUnicode_FromUnicode' is deprecated [-Wdeprecated-de
+clarations]
+            return PyUnicode_FromUnicode(NULL, 0);
+                   ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpytho
+n/unicodeobject.h:551:1: note: 'PyUnicode_FromUnicode' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+    ^
+    /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pyport
+.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+    #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                         ^
+    14 warnings and 10 errors generated.
+    error: command '/usr/bin/clang' failed with exit code 1
+    ----------------------------------------
+    ERROR: Failed building wheel for pkuseg
+    Running setup.py clean for pkuseg
+  Failed to build pkuseg
+  Installing collected packages: pkuseg
+      Running setup.py install for pkuseg: started
+      Running setup.py install for pkuseg: finished with status 'error'
+      ERROR: Command errored out with exit status 1:
+       command: /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/bin/pytho
+n -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/private/var/folders/wq/25d2
+fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-h_24bwtg/setup.py'"'"'; __file__='"'"'/private/var/fold
+ers/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-h_24bwtg/setup.py'"'"';f = getattr(tokenize,
+ '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools
+ import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(
+compile(code, __file__, '"'"'exec'"'"'))' install --record /private/var/folders/wq/25d2fy9x0pzc3rl
+f_zd75h540000gn/T/pip-record-owbwpqpa/install-record.txt --single-version-externally-managed --com
+pile --install-headers /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/in
+clude/site/python3.10/pkuseg
+           cwd: /private/var/folders/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-h_24bwtg/
+      Complete output (259 lines):
+      /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/lib/python3.10/site
+-packages/setuptools/__init__.py:148: SetuptoolsDeprecationWarning: setup_requires is deprecated. 
+Supply build dependencies using PEP 517 pyproject.toml build-requires.
+        warnings.warn(
+      running install
+      /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/lib/python3.10/site
+-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is depr
+ecated. Use build and pip and other standards-based tools.
+        warnings.warn(
+      running build
+      running build_py
+      creating build
+      creating build/lib.macosx-12-x86_64-3.10
+      creating build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/config.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/gradient.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/download.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/res_summarize.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/model.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/optimizer.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/trainer.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/data.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/scorer.py -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      creating build/lib.macosx-12-x86_64-3.10/pkuseg/dicts
+      copying pkuseg/dicts/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/dicts
+      creating build/lib.macosx-12-x86_64-3.10/pkuseg/models
+      copying pkuseg/models/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/models
+      creating build/lib.macosx-12-x86_64-3.10/pkuseg/postag
+      copying pkuseg/postag/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/postag
+      copying pkuseg/postag/model.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/postag
+      creating build/lib.macosx-12-x86_64-3.10/pkuseg/models/default
+      copying pkuseg/models/default/__init__.py -> build/lib.macosx-12-x86_64-3.10/pkuseg/models/d
+efault
+      copying pkuseg/inference.pyx -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/feature_extractor.pyx -> build/lib.macosx-12-x86_64-3.10/pkuseg
+      copying pkuseg/dicts/default.pkl -> build/lib.macosx-12-x86_64-3.10/pkuseg/dicts
+      copying pkuseg/postag/feature_extractor.pyx -> build/lib.macosx-12-x86_64-3.10/pkuseg/postag
+      copying pkuseg/models/default/features.pkl -> build/lib.macosx-12-x86_64-3.10/pkuseg/models/
+default
+      copying pkuseg/models/default/weights.npz -> build/lib.macosx-12-x86_64-3.10/pkuseg/models/d
+efault
+      running build_ext
+      skipping 'pkuseg/inference.cpp' Cython extension (up-to-date)
+      skipping 'pkuseg/feature_extractor.c' Cython extension (up-to-date)
+      skipping 'pkuseg/postag/feature_extractor.c' Cython extension (up-to-date)
+      building 'pkuseg.inference' extension
+      creating build/temp.macosx-12-x86_64-3.10
+      creating build/temp.macosx-12-x86_64-3.10/pkuseg
+      clang -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g 
+-fwrapv -O3 -Wall -I/Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/lib/p
+ython3.10/site-packages/numpy/core/include -I/usr/local/include -I/usr/local/opt/openssl@1.1/inclu
+de -I/usr/local/opt/sqlite/include -I/Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFj
+f1lZ-py3.10/include -I/usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include
+/python3.10 -c pkuseg/inference.cpp -o build/temp.macosx-12-x86_64-3.10/pkuseg/inference.o
+      In file included from pkuseg/inference.cpp:647:
+      In file included from /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.
+10/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h:5:
+      In file included from /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.
+10/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+      In file included from /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.
+10/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h:1960:
+      /Users/oywl/Library/Caches/pypoetry/virtualenvs/wullicst-UnFjf1lZ-py3.10/lib/python3.10/site
+-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy
+ API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+      #warning "Using deprecated NumPy API, disable it with " \
+       ^
+      pkuseg/inference.cpp:22327:5: error: expression is not assignable
+          ++Py_REFCNT(o);
+          ^ ~~~~~~~~~~~~
+      pkuseg/inference.cpp:22329:5: error: expression is not assignable
+          --Py_REFCNT(o);
+          ^ ~~~~~~~~~~~~
+      pkuseg/inference.cpp:22616:5: error: expression is not assignable
+          ++Py_REFCNT(o);
+          ^ ~~~~~~~~~~~~
+      pkuseg/inference.cpp:22618:5: error: expression is not assignable
+          --Py_REFCNT(o);
+          ^ ~~~~~~~~~~~~
+      pkuseg/inference.cpp:22855:5: error: expression is not assignable
+          ++Py_REFCNT(o);
+          ^ ~~~~~~~~~~~~
+      pkuseg/inference.cpp:22857:5: error: expression is not assignable
+          --Py_REFCNT(o);
+          ^ ~~~~~~~~~~~~
+      pkuseg/inference.cpp:23619:26: error: no member named 'tp_print' in '_typeobject'
+        __pyx_type___pyx_array.tp_print = 0;
+        ~~~~~~~~~~~~~~~~~~~~~~ ^
+      pkuseg/inference.cpp:23624:32: error: no member named 'tp_print' in '_typeobject'
+        __pyx_type___pyx_MemviewEnum.tp_print = 0;
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+      pkuseg/inference.cpp:23639:31: error: no member named 'tp_print' in '_typeobject'
+        __pyx_type___pyx_memoryview.tp_print = 0;
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+      pkuseg/inference.cpp:23652:36: error: no member named 'tp_print' in '_typeobject'
+        __pyx_type___pyx_memoryviewslice.tp_print = 0;
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+      pkuseg/inference.cpp:24323:22: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprec
+ated-declarations]
+                          (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+            PyUnicode_WSTR_LENGTH(op) :                    \
+            ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecate
+d here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24323:22: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-de
+clarations]
+                          (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+            ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                   ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+      Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24323:22: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprec
+ated-declarations]
+                          (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                           ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+             PyUnicode_WSTR_LENGTH(op)))
+             ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecate
+d here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24323:52: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprec
+ated-declarations]
+                          (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                         ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+            PyUnicode_WSTR_LENGTH(op) :                    \
+            ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecate
+d here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24323:52: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-de
+clarations]
+                          (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                         ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+            ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                   ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+      Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24323:52: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprec
+ated-declarations]
+                          (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                         ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+             PyUnicode_WSTR_LENGTH(op)))
+             ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecate
+d here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprec
+ated-declarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+            PyUnicode_WSTR_LENGTH(op) :                    \
+            ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecate
+d here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:26: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-de
+clarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+            ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                   ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+      Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:26: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprec
+ated-declarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                               ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+             PyUnicode_WSTR_LENGTH(op)))
+             ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecate
+d here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprec
+ated-declarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                                ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:261:7: note: expanded from macro 'PyUnicode_GET_SIZE'
+            PyUnicode_WSTR_LENGTH(op) :                    \
+            ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecate
+d here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:59: warning: 'PyUnicode_AsUnicode' is deprecated [-Wdeprecated-de
+clarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                                ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:262:14: note: expanded from macro 'PyUnicode_GET_SIZE'
+            ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\
+                   ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:580:1: note: 'PyUnicode_AsUnicode' has been explicitly marked deprecated here
+      Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:24339:59: warning: '_PyUnicode_get_wstr_length' is deprecated [-Wdeprec
+ated-declarations]
+                              (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+                                                                ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:264:8: note: expanded from macro 'PyUnicode_GET_SIZE'
+             PyUnicode_WSTR_LENGTH(op)))
+             ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:451:35: note: expanded from macro 'PyUnicode_WSTR_LENGTH'
+      #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)
+                                        ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:445:1: note: '_PyUnicode_get_wstr_length' has been explicitly marked deprecate
+d here
+      Py_DEPRECATED(3.3)
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      pkuseg/inference.cpp:26222:16: warning: 'PyUnicode_FromUnicode' is deprecated [-Wdeprecated-
+declarations]
+              return PyUnicode_FromUnicode(NULL, 0);
+                     ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/cpyt
+hon/unicodeobject.h:551:1: note: 'PyUnicode_FromUnicode' has been explicitly marked deprecated her
+e
+      Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(
+      ^
+      /usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/include/python3.10/pypo
+rt.h:513:54: note: expanded from macro 'Py_DEPRECATED'
+      #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                           ^
+      14 warnings and 10 errors generated.
+      error: command '/usr/bin/clang' failed with exit code 1
+      ----------------------------------------
+  ERROR: Command errored out with exit status 1: /Users/oywl/Library/Caches/pypoetry/virtualenvs/w
+ullicst-UnFjf1lZ-py3.10/bin/python -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = 
+'"'"'/private/var/folders/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-h_24bwtg/setup.py'"'"'
+; __file__='"'"'/private/var/folders/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-req-build-h_24bwtg/se
+tup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else
+ io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'
+"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /priva
+te/var/folders/wq/25d2fy9x0pzc3rlf_zd75h540000gn/T/pip-record-owbwpqpa/install-record.txt --single
+-version-externally-managed --compile --install-headers /Users/oywl/Library/Caches/pypoetry/virtua
+lenvs/wullicst-UnFjf1lZ-py3.10/include/site/python3.10/pkuseg Check the logs for full command outp
+ut.
+  
+
+  at /usr/local/Cellar/poetry/1.1.12/libexec/lib/python3.10/site-packages/poetry/utils/env.py:1183
+ in _run
+      1179│                 output = subprocess.check_output(
+      1180│                     cmd, stderr=subprocess.STDOUT, **kwargs
+      1181│                 )
+      1182│         except CalledProcessError as e:
+    → 1183│             raise EnvCommandError(e, input=input_)
+      1184│ 
+      1185│         return decode(output)
+      1186│ 
+      1187│     def execute(self, bin, *args, **kwargs):
+
+
+Failed to add packages, reverting the pyproject.toml file to its original content.
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ la
+total 288
+drwxr-xr-x  24 oywl  staff    768 Jan 14 15:47 ./
+drwxr-xr-x   7 oywl  staff    224 Jan 11 23:21 ../
+-rw-r--r--   1 oywl  staff     38 Jan 14 15:47 .envrc
+-rw-r--r--   1 oywl  staff     43 Jan 14 15:34 .envrc~
+drwxr-xr-x  14 oywl  staff    448 Jan 14 13:40 .git/
+-rw-r--r--   1 oywl  staff   1799 Jan 11 22:10 .gitignore
+-rw-r--r--   1 oywl  staff   1063 Jan 11 22:10 LICENSE
+-rw-r--r--   1 oywl  staff     10 Jan 11 22:10 README.md
+-rw-r--r--   1 oywl  staff      0 Jan 14 05:31 algs4_app.py
+-rw-r--r--   1 oywl  staff   3860 Jan 12 23:17 avl.py
+-rw-r--r--   1 oywl  staff  15212 Jan 14 06:15 bst.py
+-rw-r--r--   1 oywl  staff   6306 Jan 14 01:47 bst_func.py
+-rw-r--r--   1 oywl  staff     15 Jan 12 05:04 bst_func.py~
+-rw-r--r--   1 oywl  staff  13469 Jan 14 15:41 poetry.lock
+-rw-r--r--   1 oywl  staff    277 Jan 14 15:43 pyproject.toml
+-rw-r--r--   1 oywl  staff   4903 Jan 14 06:17 rbt.py
+-rw-r--r--   1 oywl  staff   4945 Jan 13 16:42 rbt.py~
+-rw-r--r--   1 oywl  staff  16697 Jan 14 15:08 spider5.py
+-rw-r--r--   1 oywl  staff  16695 Jan 14 14:36 spider5.py~
+drwxr-xr-x   6 oywl  staff    192 Jan 14 15:38 st-venv/
+-rw-r--r--   1 oywl  staff   2193 Jan 14 13:40 st.py
+-rw-r--r--   1 oywl  staff    365 Jan 14 02:44 st.py~
+-rw-r--r--   1 oywl  staff   1989 Jan 14 15:11 test.py
+-rw-r--r--   1 oywl  staff   1031 Jan 14 14:22 test.py~
+direnv: error /Users/oywl/Git/Leetcode/wullicST/.envrc is blocked. Run `direnv allow` to approve i
+ts content
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ rm st-venv/ -rf
+rm: st-venv/: is a directory
+rm: -rf: No such file or directory
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ rm -rf st-venv/
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ direnv allow
+direnv: loading ~/Git/Leetcode/wullicST/.envrc
+./.envrc:1: py: command not found
+direnv: export +POETRY_ACTIVE +VIRTUAL_ENV -PS2 ~PATH
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ python
+Python 3.10.1 (main, Dec  6 2021, 22:25:40) [Clang 13.0.0 (clang-1300.0.29.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> quit()
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ poetry
+Poetry version 1.1.12
+
+USAGE
+  poetry [-h] [-q] [-v [<...>]] [-V] [--ansi] [--no-ansi] [-n] <command> [<arg1>] ... [<argN>]
+
+ARGUMENTS
+  <command>              The command to execute
+  <arg>                  The arguments of the command
+
+GLOBAL OPTIONS
+  -h (--help)            Display this help message
+  -q (--quiet)           Do not output any message
+  -v (--verbose)         Increase the verbosity of messages: "-v" for normal output, "-vv" for
+                         more verbose output and "-vvv" for debug
+  -V (--version)         Display this application version
+  --ansi                 Force ANSI output
+  --no-ansi              Disable ANSI output
+  -n (--no-interaction)  Do not ask any interactive question
+
+AVAILABLE COMMANDS
+  about                  Shows information about Poetry.
+  add                    Adds a new dependency to pyproject.toml.
+  build                  Builds a package, as a tarball and a wheel by default.
+  cache                  Interact with Poetry's cache
+  check                  Checks the validity of the pyproject.toml file.
+  config                 Manages configuration settings.
+  debug                  Debug various elements of Poetry.
+  env                    Interact with Poetry's project environments.
+  export                 Exports the lock file to alternative formats.
+  help                   Display the manual of a command
+  init                   Creates a basic pyproject.toml file in the current
+                         directory.
+  install                Installs the project dependencies.
+  lock                   Locks the project dependencies.
+  new                    Creates a new Python project at <path>.
+  publish                Publishes a package to a remote repository.
+  remove                 Removes a package from the project dependencies.
+  run                    Runs a command in the appropriate environment.
+  search                 Searches for packages on remote repositories.
+  self                   Interact with Poetry directly.
+  shell                  Spawns a shell within the virtual environment.
+  show                   Shows information about packages.
+  update                 Update the dependencies as according to the pyproject.toml
+                         file.
+  version                Shows the version of the project or bumps it when a valid bump rule is
+                         provided.
+
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ poetry remove python
+Updating dependencies
+Resolving dependencies... (0.1s)
+
+Writing lock file
+
+Package operations: 0 installs, 0 updates, 2 removals
+
+  • Removing cython (0.29.26)
+  • Removing numpy (1.22.0)
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ python
+Python 3.10.1 (main, Dec  6 2021, 22:25:40) [Clang 13.0.0 (clang-1300.0.29.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> quit()
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ la     
+total 264
+drwxr-xr-x  23 oywl  staff    736 Jan 14 15:48 ./
+drwxr-xr-x   7 oywl  staff    224 Jan 11 23:21 ../
+-rw-r--r--   1 oywl  staff     38 Jan 14 15:47 .envrc
+-rw-r--r--   1 oywl  staff     43 Jan 14 15:34 .envrc~
+drwxr-xr-x  14 oywl  staff    448 Jan 14 13:40 .git/
+-rw-r--r--   1 oywl  staff   1799 Jan 11 22:10 .gitignore
+-rw-r--r--   1 oywl  staff   1063 Jan 11 22:10 LICENSE
+-rw-r--r--   1 oywl  staff     10 Jan 11 22:10 README.md
+-rw-r--r--   1 oywl  staff      0 Jan 14 05:31 algs4_app.py
+-rw-r--r--   1 oywl  staff   3860 Jan 12 23:17 avl.py
+-rw-r--r--   1 oywl  staff  15212 Jan 14 06:15 bst.py
+-rw-r--r--   1 oywl  staff   6306 Jan 14 01:47 bst_func.py
+-rw-r--r--   1 oywl  staff     15 Jan 12 05:04 bst_func.py~
+-rw-r--r--   1 oywl  staff    168 Jan 14 15:48 poetry.lock
+-rw-r--r--   1 oywl  staff    260 Jan 14 15:48 pyproject.toml
+-rw-r--r--   1 oywl  staff   4903 Jan 14 06:17 rbt.py
+-rw-r--r--   1 oywl  staff   4945 Jan 13 16:42 rbt.py~
+-rw-r--r--   1 oywl  staff  16697 Jan 14 15:08 spider5.py
+-rw-r--r--   1 oywl  staff  16695 Jan 14 14:36 spider5.py~
+-rw-r--r--   1 oywl  staff   2193 Jan 14 13:40 st.py
+-rw-r--r--   1 oywl  staff    365 Jan 14 02:44 st.py~
+-rw-r--r--   1 oywl  staff   1989 Jan 14 15:11 test.py
+-rw-r--r--   1 oywl  staff   1031 Jan 14 14:22 test.py~
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ rm pyproject.toml 
+oywl@oywl:~/Git/Leetcode/wullicST on main
+$ 

@@ -2,7 +2,6 @@ from typing import Optional, Callable
 from random import randint
 from copy import deepcopy
 
-from termcolor import colored
 class TreeNode:
     def __init__(self, key=None, val=None, left=None, right=None):
         self.key = key

@@ -1,0 +1,18 @@
+from rbt import RBTree
+
+class ST(RBTree):
+    def __init__(self, data):
+        super().__init__()
+        if isinstance(data, list):
+            for key in data:
+                self.put(key)
+        elif isinstance(data, dict):
+            for key in data.keys():
+                self.put(key, data[key])
+
+
+
+    pass
+
+class SET(ST):
+    def __init__(self, keys):
